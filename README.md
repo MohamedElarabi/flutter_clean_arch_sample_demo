@@ -1,6 +1,12 @@
 # clean_arc_first
 
-A new Flutter project.
+This a sample app that implement Uncle Bob's Clean Architecture in Flutter.
+
+There are 3 main Layers to help separate the code:
+
+1- Domain.
+2- Data.
+3- Presentation.
 
 ## Getting Started
 
