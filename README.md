@@ -1,4 +1,4 @@
-# clean_arc_first
+# Clean Architecture for Flutter
 
 This a sample app that implement Uncle Bob's Clean Architecture in Flutter.
 
@@ -10,7 +10,11 @@ There are 3 main Layers to help separate the code:
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Domain Layer: defines the business logic of the application and contains UseCases, Domain Entities, and Repository Interfaces.
+
+Data Layer: responsible for data retrieval and contains APIs, Local Storage, Data objects (Request, Response and DB objects), and the Repository Implementation.
+
+Presentation the UI of the application and contains Screens, Widgets and Presentation logic.
 
 A few resources to get you started if this is your first Flutter project:
 
