@@ -51,7 +51,7 @@ class DioHelper {
       {Map<String, dynamic>? prams, bool withHeader = true}) async {
     try {
       final result = await _dio.get(
-        url,
+        AppConstance.baseUrl + url,
         queryParameters: prams,
         options: Options(
           headers: withHeader

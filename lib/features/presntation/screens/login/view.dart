@@ -1,4 +1,5 @@
 import 'package:clean_arc_first/core/service/service_locator.dart';
+import 'package:clean_arc_first/features/presntation/screens/home_screen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,6 +33,29 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               TextFormField(
                 controller: bloc.loginPrams.phone,
+                decoration: InputDecoration(
+                    labelText: "Enter Phone",
+                    fillColor: Colors.white,
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 2.0,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.blue,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.grey,
+                        width: 2.0,
+                      ),
+                    )),
                 validator: (s) {
                   if (s!.isEmpty) {
                     return "Phone is required";
@@ -39,7 +63,33 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 },
               ),
+              const SizedBox(
+                height: 30,
+              ),
               TextFormField(
+                decoration: InputDecoration(
+                    labelText: "Enter Password",
+                    fillColor: Colors.white,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.blue,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 2.0,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: const BorderSide(
+                        color: Colors.grey,
+                        width: 2.0,
+                      ),
+                    )),
                 controller: bloc.loginPrams.password,
                 obscureText: true,
                 validator: (s) {
@@ -63,6 +113,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         .showSnackBar(SnackBar(content: Text(state.msg)));
                   } else if (state.requestState == GlobalState.isLoaded) {
                     LoadingScreen.hide(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text(
                             "Welcome ${state.user!.fullName} you are Login Now ")));
