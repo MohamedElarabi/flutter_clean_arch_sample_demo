@@ -5,7 +5,6 @@ import 'package:get_it/get_it.dart';
 
 import '../../features/data/repository/base_auth_repository.dart';
 import '../../features/presntation/controllers/login_bloc/bloc.dart';
-
 import '../utils/network/dio.dart';
 
 final sl = GetIt.instance;
@@ -20,7 +19,7 @@ class ServicesLocator {
     sl.registerLazySingleton<BaseAuthRepository>(() => AuthRepository(sl()));
     sl.registerLazySingleton<BaseAuthRemoteDataSource>(
         () => AuthRemoteDataSource(sl()));
-    //Bloc    
+    //Bloc
     sl.registerFactory<LoginBloc>(() => LoginBloc(
           sl(),
         ));
