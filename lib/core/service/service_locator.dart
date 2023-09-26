@@ -12,14 +12,17 @@ final sl = GetIt.instance;
 
 class ServicesLocator {
   void init() {
+    //UseCases
     sl.registerLazySingleton(() => LoginUseCase(sl()));
+    //Network
     sl.registerLazySingleton<DioHelper>(() => DioHelper());
+    //Repository
     sl.registerLazySingleton<BaseAuthRepository>(() => AuthRepository(sl()));
     sl.registerLazySingleton<BaseAuthRemoteDataSource>(
         () => AuthRemoteDataSource(sl()));
+    //Bloc    
     sl.registerFactory<LoginBloc>(() => LoginBloc(
           sl(),
         ));
-    ////// Bloc
   }
 }

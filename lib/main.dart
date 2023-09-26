@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'core/service/service_locator.dart';
 import 'features/presntation/screens/login/view.dart';
 
