@@ -1,4 +1,4 @@
 class AppConstance {
-  static String baseUrl = "https://backend.autoboutique-cars.com/api/";
+  static String baseUrl = "";
   static String loginEndPoint = "login";
 }
