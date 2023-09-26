@@ -20,9 +20,8 @@ Presentation the UI of the application and contains Screens, Widgets and Present
 
 A few resources to get you started if this is your first Flutter project:
 
-- [GetX](https://docs.flutter.dev/get-started/codelab](https://pub.dev/packages/get))
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Dio](https://pub.dev/packages/dio)
+- [Equatable](https://pub.dev/packages/equatable)
+- [Dartz](https://pub.dev/packages/dartz)
+- [Flutter_bloc](https://pub.dev/packages/flutter_bloc)
+- [get_it](https://pub.dev/packages/get_it)
