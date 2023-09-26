@@ -8,13 +8,15 @@ There are 3 main Layers to help separate the code:
 2- Data.
 3- Presentation.
 
-## Getting Started
-
 Domain Layer: defines the business logic of the application and contains UseCases, Domain Entities, and Repository Interfaces.
 
 Data Layer: responsible for data retrieval and contains APIs, Local Storage, Data objects (Request, Response and DB objects), and the Repository Implementation.
 
 Presentation the UI of the application and contains Screens, Widgets and Presentation logic.
+
+## Getting Started
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
